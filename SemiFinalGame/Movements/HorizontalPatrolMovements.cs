@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace SemiFinalGame.Movements
 {
-    public class PatrolMovement : IMovement
+    public class HorizontalPatrolMovement : IMovement
     {
         private float leftBound;
         private float rightBound;
         private float speed = 2f;
 
-        public PatrolMovement(float left, float right)
+        public HorizontalPatrolMovement(float left, float right)
         {
             leftBound = left;
             rightBound = right;
