@@ -14,6 +14,11 @@ namespace SemiFinalGame.Systems
         public float Gravity { get; set; } = 0.5f;
 
         // Apply physics to objects that have physics enabled
+        //public void ApplyJump(IMovable player, float jumpForce)
+        //{
+        //    player.Velocity = new PointF(player.Velocity.X, jumpForce);
+        //}
+
         public void Apply(List<GameObject> objects)
         {
             foreach (var obj in objects.OfType<IPhysicsObject>().Where(o => o.HasPhysics))

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             Label lblscore;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             tiles2 = new PictureBox();
@@ -36,6 +37,7 @@
             box1 = new PictureBox();
             tiles1 = new PictureBox();
             lblhighscore = new Label();
+            gameTimer = new System.Windows.Forms.Timer(components);
             lblscore = new Label();
             ((System.ComponentModel.ISupportInitialize)tiles2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)playerdown).BeginInit();
@@ -43,6 +45,18 @@
             ((System.ComponentModel.ISupportInitialize)box1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)tiles1).BeginInit();
             SuspendLayout();
+            // 
+            // lblscore
+            // 
+            lblscore.AutoSize = true;
+            lblscore.BackColor = Color.Transparent;
+            lblscore.Font = new Font("Segoe UI Black", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblscore.ForeColor = Color.White;
+            lblscore.Location = new Point(23, 9);
+            lblscore.Name = "lblscore";
+            lblscore.Size = new Size(144, 45);
+            lblscore.TabIndex = 7;
+            lblscore.Text = "Score: 0";
             // 
             // tiles2
             // 
@@ -70,7 +84,7 @@
             // box2
             // 
             box2.Image = Properties.Resources.box;
-            box2.Location = new Point(518, 393);
+            box2.Location = new Point(632, 393);
             box2.Name = "box2";
             box2.Size = new Size(76, 154);
             box2.TabIndex = 4;
@@ -97,18 +111,6 @@
             tiles1.TabIndex = 6;
             tiles1.TabStop = false;
             // 
-            // lblscore
-            // 
-            lblscore.AutoSize = true;
-            lblscore.BackColor = Color.Transparent;
-            lblscore.Font = new Font("Segoe UI Black", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblscore.ForeColor = Color.White;
-            lblscore.Location = new Point(23, 9);
-            lblscore.Name = "lblscore";
-            lblscore.Size = new Size(144, 45);
-            lblscore.TabIndex = 7;
-            lblscore.Text = "Score: 0";
-            // 
             // lblhighscore
             // 
             lblhighscore.AutoSize = true;
@@ -120,6 +122,12 @@
             lblhighscore.Size = new Size(230, 45);
             lblhighscore.TabIndex = 8;
             lblhighscore.Text = "High Score: 0";
+            // 
+            // gameTimer
+            // 
+            gameTimer.Enabled = true;
+            gameTimer.Interval = 20;
+            gameTimer.Tick += GameTimerEvent;
             // 
             // GameForm
             // 
@@ -138,6 +146,7 @@
             Name = "GameForm";
             Text = "Game Form";
             Load += GameForm_Load;
+            KeyUp += KeyIsUp;
             ((System.ComponentModel.ISupportInitialize)tiles2).EndInit();
             ((System.ComponentModel.ISupportInitialize)playerdown).EndInit();
             ((System.ComponentModel.ISupportInitialize)box2).EndInit();
@@ -155,5 +164,6 @@
         private PictureBox box1;
         private PictureBox tiles1;
         private Label lblhighscore;
+        private System.Windows.Forms.Timer gameTimer;
     }
 }
