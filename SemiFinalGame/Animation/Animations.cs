@@ -1,76 +1,76 @@
-﻿using System;
+﻿using SemiFinalGame.Entities;
+using SemiFinalGame.Interfaces;
+using System;
 using System.Drawing;
 
 namespace SemiFinalGame.Animation
 {
-    public class Animations
+    public class AnimationSystem : IAnimation
     {
-        // Animation frames for different states
-        public Image[] IdleFrames;
-        public Image[] WalkFrames;
-        public Image[] AttackFrames;
-        public Image[] DeathFrames;
+        private Dictionary<string, List<Image>> animations;
+        private string current;
+        private int frame;
+        private float timer;
+        private float frameDuration = 0.15f;
+        private bool shouldReset = false;
 
-        private float frameTime;      // Time per frame
-        private float timer;          // Timer for updating frames
-        private int currentFrame;     // Current frame index
-        private Image[] currentFrames; // Current animation frames
-
-        public Animations(float frameTime = 0.2f)
+        public AnimationSystem(Dictionary<string, List<Image>> animations, string startState)
         {
-            this.frameTime = frameTime;
+            this.animations = animations;
+            current = startState;
+            frame = 0;
             timer = 0;
-            currentFrame = 0;
+            frameDuration = 0.08f;
+        }
+        public void SetSpeed(float duration)
+        {
+            frameDuration = duration;
         }
 
-        // Set current animation frames based on state
-        public void SetState(string state)
+        public void Update(GameTime time)
         {
-            switch (state)
-            {
-                case "Idle":
-                    currentFrames = IdleFrames;
-                    break;
-                case "Walk":
-                    currentFrames = WalkFrames;
-                    break;
-                case "Attack":
-                    currentFrames = AttackFrames;
-                    break;
-                case "Death":
-                    currentFrames = DeathFrames;
-                    break;
-                default:
-                    currentFrames = IdleFrames;
-                    break;
-            }
-            currentFrame = 0;
-            timer = 0;
-        }
+            timer += time.DeltaTime;
 
-        // Update animation frames
-        public void Update(float deltaTime)
-        {
-            if (currentFrames == null || currentFrames.Length <= 1)
-                return;
-
-            timer += deltaTime;
-            if (timer >= frameTime)
+            if (timer >= frameDuration)
             {
+                // Reset animation if requested
+                if (shouldReset)
+                {
+                    frame = 0;
+                    shouldReset = false;
+                }
+                else
+                {
+                    frame = (frame + 1) % animations[current].Count;
+                }
                 timer = 0;
-                currentFrame++;
-                if (currentFrame >= currentFrames.Length)
-                    currentFrame = 0; // Loop animation
             }
         }
 
-        // Get current frame
         public Image GetCurrentFrame()
         {
-            if (currentFrames == null || currentFrames.Length == 0)
-                return null;
+            if (animations.ContainsKey(current) && animations[current].Count > 0)
+            {
+                frame = Math.Min(frame, animations[current].Count - 1); // safety
+                return animations[current][frame];
+            }
 
-            return currentFrames[currentFrame];
+            return animations[current].FirstOrDefault();
+
+        }
+
+        public void Play(string name)
+        {
+
+            if (current == name) return;
+            {
+                current = name;
+                frame = 0;
+                timer = 0;
+                shouldReset = false;
+            }
         }
     }
 }
+
+

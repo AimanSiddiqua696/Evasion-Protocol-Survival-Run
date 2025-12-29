@@ -7,52 +7,39 @@ namespace SemiFinalGame.Sound
 {
     public class SoundManager
     {
-        private SoundPlayer backgroundMusic;
-        private Dictionary<string, string> soundEffects; // name -> file path
+        SoundPlayer player;
+        MemoryStream savedStream;
 
-        public SoundManager()
+        public void Play(Stream resourceStream)
         {
-            soundEffects = new Dictionary<string, string>();
+            MemoryStream ms = new MemoryStream();
+            resourceStream.Position = 0;
+            resourceStream.CopyTo(ms);
+            ms.Position = 0;
+
+            player = new SoundPlayer(ms);
+            player.Play();
         }
 
-        // Load background music
-        public void SetBackgroundMusic(string filePath)
+        public void PlayLoop(Stream resourceStream)
         {
-            backgroundMusic = new SoundPlayer(filePath);
+            player?.Stop(); // Purana stop
+            player?.Dispose();
+            MemoryStream ms = new MemoryStream();
+            resourceStream.Position = 0;
+            resourceStream.CopyTo(ms);
+            ms.Position = 0;
+
+            player = new SoundPlayer(ms);
+            player.Load();
+            player.PlayLooping();
+
         }
 
-        // Play background music (loop)
-        public void PlayBackgroundMusic()
+        public void Stop()
         {
-            if (backgroundMusic != null)
-                Task.Run(() => backgroundMusic.PlayLooping());
-        }
-
-        public void StopBackgroundMusic()
-        {
-            backgroundMusic?.Stop();
-        }
-
-        // Add a sound effect
-        public void AddSoundEffect(string name, string filePath)
-        {
-            if (!soundEffects.ContainsKey(name))
-                soundEffects.Add(name, filePath);
-        }
-
-        // Play a sound effect
-        public void PlaySoundEffect(string name)
-        {
-            if (!soundEffects.ContainsKey(name))
-                return;
-
-            Task.Run(() =>
-            {
-                using (SoundPlayer sfx = new SoundPlayer(soundEffects[name]))
-                {
-                    sfx.Play();
-                }
-            });
+            if (player != null)
+                player.Stop();
         }
     }
 }

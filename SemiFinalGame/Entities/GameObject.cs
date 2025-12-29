@@ -9,7 +9,7 @@ using System.Drawing;
 
 namespace SemiFinalGame.Entities
 {
-    public class GameObject : IDrawable, IUpdatable, IMovable, ICollidable, IPhysicsObject
+    public class GameObject : IDrawable, IUpdatable, IMovable, ICollidable, IPhysicsObject 
     {
         // Position of the object in the game world (encapsulated state)
         public PointF Position { get; set; }
