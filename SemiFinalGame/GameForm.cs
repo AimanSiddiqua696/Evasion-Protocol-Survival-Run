@@ -19,6 +19,11 @@ namespace SemiFinalGame
 
         private HorizontalMovement horizontalMovement;
         private VerticalMovement verticalMovement;
+        private bool gameEnded = false;
+        private int initialFormWidth;
+        private int initialFormHeight;
+
+
 
         // movement flags
         private bool moveLeft, moveRight, moveUp, moveDown;
@@ -29,7 +34,7 @@ namespace SemiFinalGame
             playerSprite.Size = new Size(48, 48);   // adjust if needed
             playerSprite.Location = new Point(100, 300);
 
-            // 👇 IMAGE FROM RESOURCES
+            //  IMAGE FROM RESOURCES
             playerSprite.Image = Properties.Resources.run_down0;
             playerSprite.SizeMode = PictureBoxSizeMode.StretchImage;
             playerSprite.BackColor = Color.Transparent;
@@ -44,6 +49,11 @@ namespace SemiFinalGame
         public GameForm()
         {
             InitializeComponent();
+            this.Resize += GameForm_Resize;
+            initialFormWidth = this.ClientSize.Width;
+            initialFormHeight = this.ClientSize.Height;
+
+
 
             this.DoubleBuffered = true;
             this.KeyPreview = true;
@@ -70,6 +80,7 @@ namespace SemiFinalGame
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
+            // ================= PLAYER MOVEMENT =================
             if (moveLeft)
                 horizontalMovement.MoveLeft(player);
 
@@ -85,84 +96,89 @@ namespace SemiFinalGame
             // Apply position to sprite
             playerSprite.Left = (int)player.Position.X;
             playerSprite.Top = (int)player.Position.Y;
-            //foreach (Obstacle obstacle in obstacles)
-            //{
-            //    obstacle.Update();
 
-            //    if (playerSprite.Bounds.IntersectsWith(obstacle.Sprite.Bounds))
-            //    {
-            //        GameOver();
-            //    }
-            //}
-            foreach (Obstacle obstacle in obstacles.ToList())
-                obstacle.Update();
+            // ================= OBSTACLE UPDATE =================
+            bool hitObstacle = false;   // FLAG
 
-            // Update coins
-            UpdateCoins(); // 👈 This will move coins and handle collection
-
-            // Collision with obstacles
             foreach (Obstacle obstacle in obstacles)
             {
+                obstacle.Update();
+
+                // Only detect collision, DO NOT call GameOver here
                 if (playerSprite.Bounds.IntersectsWith(obstacle.Sprite.Bounds))
                 {
-                    GameOver();
+                    hitObstacle = true;
                 }
             }
 
+            // ================= COINS UPDATE =================
+            UpdateCoins();
 
+            // ================= GAME OVER AFTER LOOP =================
+            if (hitObstacle)
+            {
+                GameOver();
+            }
         }
+
         private bool isGameOver = false;
 
         private void GameOver()
         {
-            if (isGameOver) return;
+            if (gameEnded) return;
 
-            isGameOver = true;
+            gameEnded = true;
             gameTimer.Stop();
 
-            // Show message box with Yes/No buttons
             DialogResult result = MessageBox.Show(
-                "Game Over!\nDo you want to play again?",   // message
-                "Gravity Run",                              // title
-                MessageBoxButtons.YesNo,                    // buttons
-                MessageBoxIcon.Question                    // icon
+                " GAME OVER!\nDo you want to play again?",
+                "Gravity Run",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
             );
 
             if (result == DialogResult.Yes)
-            {
-                RestartGame();  // Reset everything
-            }
+                RestartGame();
             else
-            {
-                this.Close();   // Exit the game
-            }
+                this.Close();
         }
+
 
         private void RestartGame()
         {
-            // Reset player position
-            player.Position = new PointF(100, 300);
-            playerSprite.Left = (int)player.Position.X;
-            playerSprite.Top = (int)player.Position.Y;
+            // Reset flags
+            gameEnded = false;
+            isGameOver = false;
 
-            // Remove old obstacle PictureBoxes from the Form
+            // Reset score
+            score = 0;
+            scoreLabel.Text = "Score: 0";
+
+            // Reset player
+            player.Position = new PointF(100, 300);
+            playerSprite.Left = 100;
+            playerSprite.Top = 300;
+
+            // Remove OLD coins from form
+            foreach (Coin coin in coins)
+            {
+                if (this.Controls.Contains(coin.Sprite))
+                    this.Controls.Remove(coin.Sprite);
+            }
+            coins.Clear();
+
+            // Remove OLD obstacles
             foreach (Obstacle obs in obstacles)
             {
                 if (this.Controls.Contains(obs.Sprite))
                     this.Controls.Remove(obs.Sprite);
-                obs.Sprite.Dispose();  // optional, to free resources
             }
-
-            // Clear obstacle list
             obstacles.Clear();
 
-            // Setup new obstacles
-            SetupObstacles();
+            // Spawn fresh game objects
+            SpawnCoins();        // IMPORTANT
+            SetupObstacles();    // IMPORTANT
 
-            // Reset movement flags
-            moveLeft = moveRight = moveUp = moveDown = false;
-
-            isGameOver = false;
             gameTimer.Start();
         }
 
@@ -246,25 +262,49 @@ namespace SemiFinalGame
 
         private void UpdateCoins()
         {
-            foreach (Coin coin in coins.ToList()) // ToList prevents collection modified error
-            {
-                coin.Movement.Move(coin.Body, null); // Move horizontally
+            if (gameEnded) return;
 
-                // Apply new position to sprite
+            foreach (Coin coin in coins.ToList())
+            {
+                coin.Movement.Move(coin.Body, null);
+
                 coin.Sprite.Left = (int)coin.Body.Position.X;
                 coin.Sprite.Top = (int)coin.Body.Position.Y;
 
-                // Collision detection with player
                 if (playerSprite.Bounds.IntersectsWith(coin.Sprite.Bounds))
                 {
                     score += coin.Value;
                     scoreLabel.Text = "Score: " + score;
 
-                    this.Controls.Remove(coin.Sprite); // Remove from form
-                    coins.Remove(coin);                // Remove from list
+                    this.Controls.Remove(coin.Sprite);
+                    coins.Remove(coin);
                 }
             }
+
+            // ✅ WIN CONDITION
+            if (coins.Count == 0 && !gameEnded)
+            {
+                gameEnded = true;
+                gameTimer.Stop();
+                ShowWinMessage();
+            }
         }
+        private void ShowWinMessage()
+        {
+            DialogResult result = MessageBox.Show(
+                "🎉 YOU WON!\nDo you want to play again?",
+                "Victory",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information
+            );
+
+            if (result == DialogResult.Yes)
+                RestartGame();
+            else
+                this.Close();
+        }
+
+
 
 
         private void SetupObstacles()
@@ -300,180 +340,82 @@ namespace SemiFinalGame
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.TopMost = true;   // optional
+        }
+
+        //private int initialFormWidth;
+        //private int initialFormHeight;
+
+        private void GameForm_Resize(object sender, EventArgs e)
+        {
+            if (gameEnded) return;
+
+            // Store initial form size on first call
+            if (initialFormWidth == 0 || initialFormHeight == 0)
+            {
+                initialFormWidth = this.ClientSize.Width;
+                initialFormHeight = this.ClientSize.Height;
+                return;
+            }
+
+            int formWidth = this.ClientSize.Width;
+            int formHeight = this.ClientSize.Height;
+
+            // ====== Player ======
+            float playerXRatio = player.Position.X / (float)initialFormWidth;
+            float playerYRatio = player.Position.Y / (float)initialFormHeight;
+
+            playerSprite.Left = (int)(playerXRatio * formWidth);
+            playerSprite.Top = (int)(playerYRatio * formHeight);
+            player.Position = new PointF(playerSprite.Left, playerSprite.Top);
+
+            // ====== Coins ======
+            foreach (Coin coin in coins)
+            {
+                float coinXRatio = coin.Body.Position.X / (float)initialFormWidth;
+                float coinYRatio = coin.Body.Position.Y / (float)initialFormHeight;
+
+                coin.Sprite.Left = (int)(coinXRatio * formWidth);
+                coin.Sprite.Top = (int)(coinYRatio * formHeight);
+                coin.Body.Position = new PointF(coin.Sprite.Left, coin.Sprite.Top);
+
+                // Update horizontal patrol bounds
+                coin.Movement = new HorizontalPatrolMovement(
+                    Math.Max(0, coin.Sprite.Left - 50),
+                    Math.Min(formWidth - coin.Sprite.Width, coin.Sprite.Left + 50)
+                );
+            }
+
+            // ====== Obstacles ======
+            foreach (Obstacle obs in obstacles)
+            {
+                float obsXRatio = obs.Sprite.Left / (float)initialFormWidth;
+                float obsYRatio = obs.Sprite.Top / (float)initialFormHeight;
+
+                obs.Sprite.Left = (int)(obsXRatio * formWidth);
+                obs.Sprite.Top = (int)(obsYRatio * formHeight);
+                obs.Body.Position = new PointF(obs.Sprite.Left, obs.Sprite.Top);
+
+                // Update vertical patrol bounds
+                if (obs.Movement is VerticalPatrolMovement)
+                {
+                    obs.Movement = new VerticalPatrolMovement(
+                        0, // top bound
+                        formHeight - obs.Sprite.Height, // bottom bound
+                        2f // default speed
+                    );
+                }
+            }
+        }
+
+
 
 
 
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //    private List<Obstacle> obstacles = new List<Obstacle>();
-
-        //    private GameObject player;
-
-        //    private HorizontalMovement horizontalMovement;
-        //    private VerticalMovement verticalMovement;
-        //    private bool isGameOver = false;
-
-
-        //    // Key states
-        //    private bool moveLeft = false;
-        //    private bool moveRight = false;
-        //    private bool moveUp = false;
-        //    private bool moveDown = false;
-
-        //    public GameForm()
-        //    {
-        //        InitializeComponent();
-        //        SetupObstacles();
-        //        // Initialize GameObject for player
-        //        player = new GameObject();
-        //        player.Position = new PointF(playerdown.Left, playerdown.Top);
-
-        //        // Initialize movement objects with speed
-        //        horizontalMovement = new HorizontalMovement(5f); // Horizontal speed
-        //        verticalMovement = new VerticalMovement(5f);     // Vertical speed
-
-        //        // Timer setup
-        //        gameTimer.Interval = 20;
-        //        gameTimer.Tick += GameTimer_Tick;
-        //        gameTimer.Start();
-
-        //        // Key events
-        //        this.KeyDown += GameForm_KeyDown;
-        //        this.KeyUp += GameForm_KeyUp;
-        //    }
-
-        //    private void GameForm_KeyDown(object sender, KeyEventArgs e)
-        //    {
-        //        if (e.KeyCode == Keys.Left) moveLeft = true;
-        //        if (e.KeyCode == Keys.Right) moveRight = true;
-        //        if (e.KeyCode == Keys.Up) moveUp = true;
-        //        if (e.KeyCode == Keys.Down) moveDown = true;
-        //    }
-
-        //    private void GameForm_KeyUp(object sender, KeyEventArgs e)
-        //    {
-        //        if (e.KeyCode == Keys.Left) moveLeft = false;
-        //        if (e.KeyCode == Keys.Right) moveRight = false;
-        //        if (e.KeyCode == Keys.Up) moveUp = false;
-        //        if (e.KeyCode == Keys.Down) moveDown = false;
-        //    }
-
-        //    private void GameTimer_Tick(object sender, EventArgs e)
-        //    {
-        //        // Horizontal movement
-        //        if (moveLeft) horizontalMovement.MoveLeft(player);
-        //        if (moveRight) horizontalMovement.MoveRight(player, this.ClientSize.Width - playerdown.Width);
-
-        //        // Vertical movement
-        //        if (moveUp) verticalMovement.MoveUp(player);
-        //        if (moveDown) verticalMovement.MoveDown(player, this.ClientSize.Height - playerdown.Height);
-
-        //        // Apply updated position to PictureBox
-        //        playerdown.Left = (int)player.Position.X;
-        //        playerdown.Top = (int)player.Position.Y;
-        //        foreach (Obstacle obstacle in obstacles)
-        //        {
-        //            obstacle.Update();
-
-        //            // Collision check
-        //            if (playerdown.Bounds.IntersectsWith(obstacle.Sprite.Bounds))
-        //            {
-        //                GameOver();
-        //            }
-        //        }
-        //    }
-        //private void SetupObstacles()
-        //{
-        //    obstacles.Add(new Obstacle(
-        //        box1,
-        //         //new HorizontalPatrolMovement(
-        //         //    box1.Left - 100,
-        //         //    box1.Left + 100
-        //         //   //box2.Top - 100,
-        //         //   // box2.Top + 100
-        //         //)
-        //         new VerticalPatrolMovement(
-        //            box1.Top - 100,
-        //            box1.Top + 100
-        //        //box1.Left - 100,
-        //        //box1.Left + 100
-        //        )
-        //    ));
-
-        //    obstacles.Add(new Obstacle(
-        //        box2,
-        //        new VerticalPatrolMovement(
-        //            box2.Top - 100,
-        //            box2.Top + 100
-        //        //box1.Left - 100,
-        //        //box1.Left + 100
-        //        )
-        //    ));
-        //}
-
-        //    private void GameOver()
-        //    {
-        //        if (isGameOver) return; // prevent multiple calls
-
-        //        isGameOver = true;
-        //        gameTimer.Stop();
-
-        //        MessageBox.Show(
-        //            "Game Over!",
-        //            "Gravity Run",
-        //            MessageBoxButtons.OK,
-        //            MessageBoxIcon.Information
-        //        );
-        //    }
-
-
-        //}
-//    }
-//}
