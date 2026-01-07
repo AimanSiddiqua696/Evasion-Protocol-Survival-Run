@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VictoryForm));
             btnPlayAgain = new Button();
             btnExit = new Button();
             lblScore = new Label();
@@ -38,15 +39,16 @@
             lblLivesTitle = new Label();
             btnLevel2 = new Button();
             lblMessage = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnPlayAgain
             // 
-            btnPlayAgain.BackColor = Color.ForestGreen;
+            btnPlayAgain.BackColor = SystemColors.GradientInactiveCaption;
             btnPlayAgain.FlatAppearance.BorderSize = 0;
             btnPlayAgain.FlatStyle = FlatStyle.Flat;
             btnPlayAgain.Font = new Font("Arial", 16F, FontStyle.Bold);
-            btnPlayAgain.ForeColor = Color.White;
+            btnPlayAgain.ForeColor = Color.Black;
             btnPlayAgain.Location = new Point(273, 673);
             btnPlayAgain.Margin = new Padding(5, 6, 5, 6);
             btnPlayAgain.Name = "btnPlayAgain";
@@ -58,11 +60,11 @@
             // 
             // btnExit
             // 
-            btnExit.BackColor = Color.Crimson;
+            btnExit.BackColor = SystemColors.GradientInactiveCaption;
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("Arial", 16F, FontStyle.Bold);
-            btnExit.ForeColor = Color.White;
+            btnExit.ForeColor = Color.Black;
             btnExit.Location = new Point(627, 673);
             btnExit.Margin = new Padding(5, 6, 5, 6);
             btnExit.Name = "btnExit";
@@ -115,12 +117,12 @@
             // 
             lblScoreTitle.AutoSize = true;
             lblScoreTitle.BackColor = Color.Transparent;
-            lblScoreTitle.Font = new Font("Arial", 20F, FontStyle.Bold);
-            lblScoreTitle.ForeColor = Color.White;
+            lblScoreTitle.Font = new Font("Arial Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblScoreTitle.ForeColor = SystemColors.GradientInactiveCaption;
             lblScoreTitle.Location = new Point(333, 385);
             lblScoreTitle.Margin = new Padding(5, 0, 5, 0);
             lblScoreTitle.Name = "lblScoreTitle";
-            lblScoreTitle.Size = new Size(312, 46);
+            lblScoreTitle.Size = new Size(350, 56);
             lblScoreTitle.TabIndex = 6;
             lblScoreTitle.Text = "FINAL SCORE :";
             // 
@@ -128,12 +130,12 @@
             // 
             lblCoinsTitle.AutoSize = true;
             lblCoinsTitle.BackColor = Color.Transparent;
-            lblCoinsTitle.Font = new Font("Arial", 20F, FontStyle.Bold);
-            lblCoinsTitle.ForeColor = Color.White;
+            lblCoinsTitle.Font = new Font("Arial Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCoinsTitle.ForeColor = SystemColors.GradientInactiveCaption;
             lblCoinsTitle.Location = new Point(333, 481);
             lblCoinsTitle.Margin = new Padding(5, 0, 5, 0);
             lblCoinsTitle.Name = "lblCoinsTitle";
-            lblCoinsTitle.Size = new Size(426, 46);
+            lblCoinsTitle.Size = new Size(472, 56);
             lblCoinsTitle.TabIndex = 7;
             lblCoinsTitle.Text = "COINS COLLECTED :";
             // 
@@ -141,22 +143,22 @@
             // 
             lblLivesTitle.AutoSize = true;
             lblLivesTitle.BackColor = Color.Transparent;
-            lblLivesTitle.Font = new Font("Arial", 20F, FontStyle.Bold);
-            lblLivesTitle.ForeColor = Color.White;
+            lblLivesTitle.Font = new Font("Arial Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLivesTitle.ForeColor = SystemColors.GradientInactiveCaption;
             lblLivesTitle.Location = new Point(333, 577);
             lblLivesTitle.Margin = new Padding(5, 0, 5, 0);
             lblLivesTitle.Name = "lblLivesTitle";
-            lblLivesTitle.Size = new Size(396, 46);
+            lblLivesTitle.Size = new Size(455, 56);
             lblLivesTitle.TabIndex = 8;
             lblLivesTitle.Text = "LIVES REMAINING :";
             // 
             // btnLevel2
             // 
-            btnLevel2.BackColor = Color.DarkOrange;
+            btnLevel2.BackColor = SystemColors.GradientInactiveCaption;
             btnLevel2.FlatAppearance.BorderSize = 0;
             btnLevel2.FlatStyle = FlatStyle.Flat;
             btnLevel2.Font = new Font("Arial", 16F, FontStyle.Bold);
-            btnLevel2.ForeColor = Color.White;
+            btnLevel2.ForeColor = Color.Black;
             btnLevel2.Location = new Point(904, 673);
             btnLevel2.Margin = new Padding(5, 6, 5, 6);
             btnLevel2.Name = "btnLevel2";
@@ -181,11 +183,24 @@
             lblMessage.TextAlign = ContentAlignment.MiddleCenter;
             lblMessage.Visible = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Berlin Sans FB Demi", 96F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.GradientInactiveCaption;
+            label1.Location = new Point(78, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(1172, 216);
+            label1.TabIndex = 11;
+            label1.Text = "VICTORY ACHIEVED";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            // 
             // VictoryForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Victory2;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1333, 865);
             Controls.Add(lblLivesTitle);
@@ -198,6 +213,7 @@
             Controls.Add(btnPlayAgain);
             Controls.Add(btnLevel2);
             Controls.Add(lblMessage);
+            Controls.Add(label1);
             Margin = new Padding(5, 6, 5, 6);
             Name = "VictoryForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -217,6 +233,7 @@
         private System.Windows.Forms.Label lblLivesTitle;
         private System.Windows.Forms.Button btnLevel2;
         private System.Windows.Forms.Label lblMessage;
+        private Label label1;
 
         #endregion
     }

@@ -118,86 +118,74 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="platform_tilesblue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\platform_tilesblue.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tile007" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile022" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile022.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="run_up0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\run_up0.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="run_down0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\run_down0.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gemini_Generated_Image_1grf2p1grf2p1grf-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gemini_Generated_Image_1grf2p1grf2p1grf-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="box" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="background_still" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background_still.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gemini_Generated_Image_14650l14650l1465-removebg-preview1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gemini_Generated_Image_14650l14650l1465-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="giphy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\giphy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="giphy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\giphy (1).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile001" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile002" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile003" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile004" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile005" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile006" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile007" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile007.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile008" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile009" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile010" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile011" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile012" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile013" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile014" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tile025" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tile015" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tile015.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tile021" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gameover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gameover.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile011" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giphy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giphy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tile016" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tile016.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backgroundimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundimage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile000" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VictoryFormsound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\VictoryFormsound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="retro-coin-4-236671" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\retro-coin-4-236671.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="tile017" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tile017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="run_down0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\run_down0.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="main" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuFormsound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuFormsound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tile020" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile020.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile003.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile005" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile005.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameOver1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameOver1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tile018" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tile018.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,76 +193,100 @@
   <data name="tile019" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tile019.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tile020" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile020.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile021" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile021.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile022" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile022.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile023" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile023.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile024" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile025" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile025.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile026" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile026.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile027" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile027.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile028" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile028.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile029" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile029.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile030" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile030.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tile031" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tile031.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="popper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\popper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Victory2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Victory2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tile004" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile004.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GameOver1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameOver1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="main" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MenuFormsound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MenuFormsound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="VictoryFormsound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VictoryFormsound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GameOversound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameOversound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GameFormsound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameFormsound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="retro-coin-4-236671" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\retro-coin-4-236671.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Gemini_Generated_Image_14650l14650l1465-removebg-preview1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gemini_Generated_Image_14650l14650l1465-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CoinSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\retro-coin-4-236671.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="computer-mouse-click-02-383961 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\computer-mouse-click-02-383961 (1).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tile001" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile001.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile031" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile031.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aeroplane-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aeroplane-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameOversound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameOversound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tile013" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile027" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile027.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile010" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile010.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameFormsound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameFormsound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Gemini_Generated_Image_1grf2p1grf2p1grf-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gemini_Generated_Image_1grf2p1grf2p1grf-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile023" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile023.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile009" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile009.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_still" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background_still.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile026" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile026.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile030" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile030.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="box" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\box.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile008" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile008.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile028" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile028.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile002" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile002.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile029" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile029.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giphy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giphy (1).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile006" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="platform_tilesblue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\platform_tilesblue.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile014" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile014.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tile012" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tile012.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Victory2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Victory2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gameover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gameover1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

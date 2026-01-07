@@ -49,6 +49,13 @@ namespace SemiFinalGame
             int centerX = this.ClientSize.Width / 2;
             int centerY = this.ClientSize.Height / 2;
 
+            // Center GameOver Title
+            if (label1 != null)
+            {
+                label1.Left = (this.ClientSize.Width - label1.Width) / 2;
+                label1.Top = centerY - label1.Height - 100; // Positioned above the score labels
+            }
+
             // Align all numbers to the same X coordinate, slightly to the right of the center
             int labelX = centerX + 20; 
 

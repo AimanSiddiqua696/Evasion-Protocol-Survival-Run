@@ -64,6 +64,13 @@ namespace SemiFinalGame
             int centerX = this.ClientSize.Width / 2;
             int centerY = this.ClientSize.Height / 2;
 
+            // Center Victory Title
+            if (label1 != null)
+            {
+                label1.Left = (this.ClientSize.Width - label1.Width) / 2;
+                label1.Top = centerY - label1.Height - 120; // Slightly above center
+            }
+
             // Align all numbers to the same X coordinate, slightly to the right of the center
             int labelX = centerX + 20; 
 
@@ -115,9 +122,8 @@ namespace SemiFinalGame
 
             if (lblMessage != null)
             {
-                // Move it LOWER, under the "VICTORY ACHIEVED" header
-                // Assuming header is at top, maybe Y=160 is safe?
-                lblMessage.Location = new Point((this.ClientSize.Width - lblMessage.Width) / 2, 160);
+                // Positioned below the VICTORY ACHIEVED title
+                lblMessage.Location = new Point((this.ClientSize.Width - lblMessage.Width) / 2, label1.Bottom + 5);
             }
         }
 

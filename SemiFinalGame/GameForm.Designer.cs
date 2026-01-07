@@ -30,24 +30,23 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             gameTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // gameTimer
             // 
-            gameTimer.Enabled = false;
             gameTimer.Interval = 20;
             // 
             // GameForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.background_still;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(947, 567);
             Name = "GameForm";
             Text = "Game Form";
+            Load += GameForm_Load;
             ResumeLayout(false);
         }
 

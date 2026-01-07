@@ -63,9 +63,29 @@ namespace SemiFinalGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aeroplane_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("aeroplane-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_still {
             get {
                 object obj = ResourceManager.GetObject("background_still", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backgroundimage {
+            get {
+                object obj = ResourceManager.GetObject("backgroundimage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -104,6 +124,16 @@ namespace SemiFinalGame.Properties {
         internal static System.IO.UnmanagedMemoryStream GameFormsound {
             get {
                 return ResourceManager.GetStream("GameFormsound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gameover {
+            get {
+                object obj = ResourceManager.GetObject("gameover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

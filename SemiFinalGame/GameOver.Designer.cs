@@ -28,140 +28,163 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.btnTryAgain = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.lblScore = new System.Windows.Forms.Label();
-            this.lblCoins = new System.Windows.Forms.Label();
-            this.lblLives = new System.Windows.Forms.Label();
-            this.lblScoreTitle = new System.Windows.Forms.Label();
-            this.lblCoinsTitle = new System.Windows.Forms.Label();
-            this.lblLivesTitle = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameOver));
+            btnTryAgain = new Button();
+            btnExit = new Button();
+            lblScore = new Label();
+            lblCoins = new Label();
+            lblLives = new Label();
+            lblScoreTitle = new Label();
+            lblCoinsTitle = new Label();
+            lblLivesTitle = new Label();
+            label1 = new Label();
+            SuspendLayout();
             // 
             // btnTryAgain
             // 
-            this.btnTryAgain.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnTryAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTryAgain.FlatAppearance.BorderSize = 0;
-            this.btnTryAgain.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.btnTryAgain.ForeColor = System.Drawing.Color.White;
-            this.btnTryAgain.Location = new System.Drawing.Point(250, 350);
-            this.btnTryAgain.Name = "btnTryAgain";
-            this.btnTryAgain.Size = new System.Drawing.Size(160, 60);
-            this.btnTryAgain.TabIndex = 1;
-            this.btnTryAgain.Text = "Try Again";
-            this.btnTryAgain.UseVisualStyleBackColor = false;
-            this.btnTryAgain.Click += new System.EventHandler(this.btnTryAgain_Click);
+            btnTryAgain.BackColor = SystemColors.GradientInactiveCaption;
+            btnTryAgain.FlatAppearance.BorderSize = 0;
+            btnTryAgain.FlatStyle = FlatStyle.Flat;
+            btnTryAgain.Font = new Font("Century", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTryAgain.ForeColor = Color.Black;
+            btnTryAgain.Location = new Point(417, 673);
+            btnTryAgain.Margin = new Padding(5, 6, 5, 6);
+            btnTryAgain.Name = "btnTryAgain";
+            btnTryAgain.Size = new Size(267, 115);
+            btnTryAgain.TabIndex = 1;
+            btnTryAgain.Text = "Try Again";
+            btnTryAgain.UseVisualStyleBackColor = false;
+            btnTryAgain.Click += btnTryAgain_Click;
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Crimson;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(430, 350);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(160, 60);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            btnExit.BackColor = SystemColors.GradientInactiveCaption;
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Century", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExit.ForeColor = Color.Black;
+            btnExit.Location = new Point(717, 673);
+            btnExit.Margin = new Padding(5, 6, 5, 6);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(267, 115);
+            btnExit.TabIndex = 2;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // lblScore
             // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(400, 200); 
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(30, 32);
-            this.lblScore.TabIndex = 3;
-            this.lblScore.Text = "0";
+            lblScore.AutoSize = true;
+            lblScore.BackColor = Color.Transparent;
+            lblScore.Font = new Font("Arial", 20F, FontStyle.Bold);
+            lblScore.ForeColor = Color.White;
+            lblScore.Location = new Point(667, 385);
+            lblScore.Margin = new Padding(5, 0, 5, 0);
+            lblScore.Name = "lblScore";
+            lblScore.Size = new Size(42, 46);
+            lblScore.TabIndex = 3;
+            lblScore.Text = "0";
             // 
             // lblCoins
             // 
-            this.lblCoins.AutoSize = true;
-            this.lblCoins.BackColor = System.Drawing.Color.Transparent;
-            this.lblCoins.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.lblCoins.ForeColor = System.Drawing.Color.White;
-            this.lblCoins.Location = new System.Drawing.Point(400, 250); 
-            this.lblCoins.Name = "lblCoins";
-            this.lblCoins.Size = new System.Drawing.Size(30, 32);
-            this.lblCoins.TabIndex = 4;
-            this.lblCoins.Text = "0";
+            lblCoins.AutoSize = true;
+            lblCoins.BackColor = Color.Transparent;
+            lblCoins.Font = new Font("Arial", 20F, FontStyle.Bold);
+            lblCoins.ForeColor = Color.White;
+            lblCoins.Location = new Point(667, 481);
+            lblCoins.Margin = new Padding(5, 0, 5, 0);
+            lblCoins.Name = "lblCoins";
+            lblCoins.Size = new Size(42, 46);
+            lblCoins.TabIndex = 4;
+            lblCoins.Text = "0";
             // 
             // lblLives
             // 
-            this.lblLives.AutoSize = true;
-            this.lblLives.BackColor = System.Drawing.Color.Transparent;
-            this.lblLives.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.lblLives.ForeColor = System.Drawing.Color.White;
-            this.lblLives.Location = new System.Drawing.Point(400, 300); 
-            this.lblLives.Name = "lblLives";
-            this.lblLives.Size = new System.Drawing.Size(30, 32);
-            this.lblLives.TabIndex = 5;
-            this.lblLives.Text = "0";
+            lblLives.AutoSize = true;
+            lblLives.BackColor = Color.Transparent;
+            lblLives.Font = new Font("Arial", 20F, FontStyle.Bold);
+            lblLives.ForeColor = Color.White;
+            lblLives.Location = new Point(667, 577);
+            lblLives.Margin = new Padding(5, 0, 5, 0);
+            lblLives.Name = "lblLives";
+            lblLives.Size = new Size(42, 46);
+            lblLives.TabIndex = 5;
+            lblLives.Text = "0";
             // 
             // lblScoreTitle
             // 
-            this.lblScoreTitle.AutoSize = true;
-            this.lblScoreTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblScoreTitle.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.lblScoreTitle.ForeColor = System.Drawing.Color.White;
-            this.lblScoreTitle.Location = new System.Drawing.Point(200, 200); 
-            this.lblScoreTitle.Name = "lblScoreTitle";
-            this.lblScoreTitle.Size = new System.Drawing.Size(180, 32);
-            this.lblScoreTitle.TabIndex = 6;
-            this.lblScoreTitle.Text = "FINAL SCORE :";
+            lblScoreTitle.AutoSize = true;
+            lblScoreTitle.BackColor = Color.Transparent;
+            lblScoreTitle.Font = new Font("Arial Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblScoreTitle.ForeColor = SystemColors.GradientInactiveCaption;
+            lblScoreTitle.Location = new Point(333, 385);
+            lblScoreTitle.Margin = new Padding(5, 0, 5, 0);
+            lblScoreTitle.Name = "lblScoreTitle";
+            lblScoreTitle.Size = new Size(350, 56);
+            lblScoreTitle.TabIndex = 6;
+            lblScoreTitle.Text = "FINAL SCORE :";
             // 
             // lblCoinsTitle
             // 
-            this.lblCoinsTitle.AutoSize = true;
-            this.lblCoinsTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblCoinsTitle.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.lblCoinsTitle.ForeColor = System.Drawing.Color.White;
-            this.lblCoinsTitle.Location = new System.Drawing.Point(200, 250); 
-            this.lblCoinsTitle.Name = "lblCoinsTitle";
-            this.lblCoinsTitle.Size = new System.Drawing.Size(280, 32);
-            this.lblCoinsTitle.TabIndex = 7;
-            this.lblCoinsTitle.Text = "COINS COLLECTED :";
+            lblCoinsTitle.AutoSize = true;
+            lblCoinsTitle.BackColor = Color.Transparent;
+            lblCoinsTitle.Font = new Font("Arial Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCoinsTitle.ForeColor = SystemColors.GradientInactiveCaption;
+            lblCoinsTitle.Location = new Point(333, 481);
+            lblCoinsTitle.Margin = new Padding(5, 0, 5, 0);
+            lblCoinsTitle.Name = "lblCoinsTitle";
+            lblCoinsTitle.Size = new Size(472, 56);
+            lblCoinsTitle.TabIndex = 7;
+            lblCoinsTitle.Text = "COINS COLLECTED :";
             // 
             // lblLivesTitle
             // 
-            this.lblLivesTitle.AutoSize = true;
-            this.lblLivesTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblLivesTitle.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.lblLivesTitle.ForeColor = System.Drawing.Color.White;
-            this.lblLivesTitle.Location = new System.Drawing.Point(200, 300); 
-            this.lblLivesTitle.Name = "lblLivesTitle";
-            this.lblLivesTitle.Size = new System.Drawing.Size(270, 32);
-            this.lblLivesTitle.TabIndex = 8;
-            this.lblLivesTitle.Text = "LIVES REMAINING :";
+            lblLivesTitle.AutoSize = true;
+            lblLivesTitle.BackColor = Color.Transparent;
+            lblLivesTitle.Font = new Font("Arial Black", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLivesTitle.ForeColor = SystemColors.GradientInactiveCaption;
+            lblLivesTitle.Location = new Point(333, 577);
+            lblLivesTitle.Margin = new Padding(5, 0, 5, 0);
+            lblLivesTitle.Name = "lblLivesTitle";
+            lblLivesTitle.Size = new Size(455, 56);
+            lblLivesTitle.TabIndex = 8;
+            lblLivesTitle.Text = "LIVES REMAINING :";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Berlin Sans FB Demi", 96F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.GradientInactiveCaption;
+            label1.Location = new Point(419, 128);
+            label1.Name = "label1";
+            label1.Size = new Size(1172, 216);
+            label1.TabIndex = 9;
+            label1.Text = "GAME OVER";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // GameOver
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SemiFinalGame.Properties.Resources.GameOver1;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblLivesTitle);
-            this.Controls.Add(this.lblCoinsTitle);
-            this.Controls.Add(this.lblScoreTitle);
-            this.Controls.Add(this.lblLives);
-            this.Controls.Add(this.lblCoins);
-            this.Controls.Add(this.lblScore);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnTryAgain);
-            this.Name = "GameOver";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Game Over";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1333, 865);
+            Controls.Add(label1);
+            Controls.Add(lblLivesTitle);
+            Controls.Add(lblCoinsTitle);
+            Controls.Add(lblScoreTitle);
+            Controls.Add(lblLives);
+            Controls.Add(lblCoins);
+            Controls.Add(lblScore);
+            Controls.Add(btnExit);
+            Controls.Add(btnTryAgain);
+            Margin = new Padding(5, 6, 5, 6);
+            Name = "GameOver";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Game Over";
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -175,5 +198,7 @@
         private System.Windows.Forms.Label lblLivesTitle;
 
         #endregion
+
+        private Label label1;
     }
 }

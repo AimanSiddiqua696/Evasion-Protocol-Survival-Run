@@ -30,18 +30,19 @@ namespace SemiFinalGame
         {
             btnStart = new Button();
             btnExit = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnStart
             // 
             btnStart.Anchor = AnchorStyles.None;
-            btnStart.BackColor = Color.Gold;
+            btnStart.BackColor = SystemColors.GradientInactiveCaption;
             btnStart.FlatStyle = FlatStyle.Flat;
-            btnStart.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnStart.Location = new Point(332, 886);
+            btnStart.Font = new Font("Century", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStart.Location = new Point(94, 505);
             btnStart.Margin = new Padding(5, 6, 5, 6);
             btnStart.Name = "btnStart";
-            btnStart.Size = new Size(333, 154);
+            btnStart.Size = new Size(304, 109);
             btnStart.TabIndex = 0;
             btnStart.Text = "START";
             btnStart.UseVisualStyleBackColor = false;
@@ -50,25 +51,40 @@ namespace SemiFinalGame
             // btnExit
             // 
             btnExit.Anchor = AnchorStyles.None;
-            btnExit.BackColor = Color.IndianRed;
+            btnExit.BackColor = SystemColors.GradientInactiveCaption;
             btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExit.Location = new Point(752, 886);
+            btnExit.Font = new Font("Century", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExit.Location = new Point(527, 505);
             btnExit.Margin = new Padding(5, 6, 5, 6);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(333, 154);
+            btnExit.Size = new Size(297, 109);
             btnExit.TabIndex = 1;
             btnExit.Text = "EXIT";
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Berlin Sans FB Demi", 72F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.GradientInactiveCaption;
+            label1.Location = new Point(100, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(1453, 163);
+            label1.TabIndex = 2;
+            label1.Text = "EVASION PROTOCOL";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            // 
             // MenuForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.main;
+            BackgroundImage = Properties.Resources.backgroundimage;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1333, 1154);
+            ClientSize = new Size(927, 617);
+            Controls.Add(label1);
             Controls.Add(btnExit);
             Controls.Add(btnStart);
             DoubleBuffered = true;
@@ -77,6 +93,7 @@ namespace SemiFinalGame
             Text = "MenuForm";
             Load += MenuForm_Load;
             ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -84,5 +101,6 @@ namespace SemiFinalGame
 
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnExit;
+        private Label label1;
     }
 }

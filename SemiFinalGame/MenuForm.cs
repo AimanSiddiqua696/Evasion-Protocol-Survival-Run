@@ -7,7 +7,7 @@ namespace SemiFinalGame
 {
     public partial class MenuForm : Form
     {
-        private Label lblLastScore;
+
         public MenuForm()
         {
             InitializeComponent();
@@ -54,28 +54,19 @@ namespace SemiFinalGame
             // Play Menu Music
             SemiFinalGame.Sound.SoundManager.PlayMusic(Properties.Resources.MenuFormsound);
 
-            // --- CREATE LABEL ---
-            lblLastScore = new Label();
-            lblLastScore.AutoSize = true;
-            lblLastScore.Font = new Font("Arial", 16, FontStyle.Bold);
-            lblLastScore.ForeColor = Color.White;
-            lblLastScore.BackColor = Color.Transparent;
-            lblLastScore.Location = new Point(20, 20); // Top-left corner
-            this.Controls.Add(lblLastScore);
-            // --- LOAD DATA ---
-            // Load the history list
-            System.Collections.Generic.List<string> history = SaveData.LoadHistory();
+            // Center Title (Horizontal) and position slightly above vertical center
+            label1.Left = (this.ClientSize.Width - label1.Width) / 2;
+            label1.Top = (this.ClientSize.Height / 2) - label1.Height - 50; // Slightly above center
 
-            if (history.Count > 0)
-            {
-                // Get the last item in the list
-                string lastRun = history[history.Count - 1];
-                lblLastScore.Text = "Last: " + lastRun;
-            }
-            else
-            {
-                lblLastScore.Text = "No games played yet.";
-            }
+            // Position Buttons at the bottom center
+            int buttonSpacing = 50;
+            int totalWidth = btnStart.Width + buttonSpacing + btnExit.Width;
+            int startX = (this.ClientSize.Width - totalWidth) / 2;
+            int buttonY = this.ClientSize.Height - btnStart.Height - 100;
+
+            btnStart.Location = new Point(startX, buttonY);
+            btnExit.Location = new Point(startX + btnStart.Width + buttonSpacing, buttonY);
+
         }
     }
     }
